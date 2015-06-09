@@ -1,11 +1,13 @@
 
+rawdata_folder<-"./data_raw/"
+data_folder<-"./data/"
 
 read_icd10_csv<-function() {
   
   folder<-"./data_raw/"
   
   file<-"tblICD10Codes.csv"
-  icd10_file<-paste(folder,file,sep="")
+  icd10_file<-paste(rawdata_folder,file,sep="")
   icd10 <- read.csv(icd10_file,stringsAsFactors=FALSE)
   
   drops<-c("Status","CategoryID")
@@ -13,10 +15,10 @@ read_icd10_csv<-function() {
   icd10<-icd10[,!(names(icd10)%in% drops)]
   
   file<-"tblICD10Ranges.csv"
-  icd10_file<-paste(folder,file,sep="")
+  icd10_file<-paste(rawdata_folder,file,sep="")
   icd10_ranges <- read.csv(icd10_file,stringsAsFactors=FALSE)
   
-  save(icd10,icd10_ranges,file="./data/icd10.RData")
+  save(icd10,icd10_ranges,file=paste(data_folder,"icd10.RData",sep=""))
 }
 
 arrange_icd10_ranges<-function(icd10_ranges,RangeCodeStart,RangeCodeEnd) {
@@ -88,3 +90,114 @@ arrange_icd10<-function(icd10,icd10_ranges) {
     
     icd10
 }
+
+download_raw_xml<-function(extract = TRUE, delete_zip=FALSE, ...) {
+  #######################################
+  ##
+  ##  set url where files are stored
+  ##
+  icd10_url<-"http://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2015/"
+  
+  
+  #######################################
+  ##
+  ##  build file url and local file path
+  ##
+  zipfile<-"ICD10CM_FY2015_Full_XML.zip"
+  
+  zip_url<-paste(icd10_url,zipfile,sep="")
+  dest_file<-paste(rawdata_folder,zipfile,sep="")
+  
+  #######################################
+  ##
+  ##  download file url to local file
+  ##
+  print(paste("Downloading ... ",zipfile,sep=""))
+  
+  
+  res=download.file(url = zip_url,destfile = dest_file,quiet=TRUE)
+  
+  if(res!=0) return (FALSE)
+  ##
+  ##  download was successful
+  ##
+  
+  ##############################################
+  ##
+  ##  extract/unzip local file
+  ##
+  if (extract) {
+    print(paste("Unzipping ... ",zipfile,sep=""))
+    exdir<-substring(rawdata_folder,1,nchar(rawdata_folder)-1)
+    unzip(dest_file, exdir = exdir,overwrite = T)
+  }
+  ###############################################
+  ##
+  ##  delete downloaded (zip) file if indicated
+  ##
+  if (delete_zip) {
+    print(paste("Removing ... ",dest_file,sep=""))
+    file.remove(dest_file)
+  }
+  return (TRUE)
+}
+
+get_xml<-function() {
+  library(XML)
+  fileUrl<-paste(rawdata_folder,"FY15_Tabular.xml",sep="")
+  
+  #  fileUrl <- "http://www.w3schools.com/xml/simple.xml"
+  doc <- xmlTreeParse(fileUrl,useInternal=TRUE)
+  rootNode <- xmlRoot(doc)
+  xmlName(rootNode)
+  
+  names(rootNode)
+  
+#   chapterNode<-rootNode[[3]]
+#   
+#   chapterNode[[3]]
+#   chapterNode[[12]][[2]]
+#   
+#   xmlSApply(rootNode,xmlValue)
+  
+#   /node Top level node
+#   //node Node at any level
+#   node[@attr-name] Node with an attribute name
+#   node[@attr-name='bob'] Node with attribute name attr-name='bob'
+
+#  chapterNodes<-xpathApply(rootNode,"//chapter",xmlValue)
+  chapterNodes<-getNodeSet(doc = doc,path = "//chapter")
+  lapply(chapterNodes,function(x) parseChapter(x))
+#  xpathSApply(chapterNodes[[1]],"//name",xmlValue)
+
+}
+
+parseChapter<-function(chapterNode){
+  chapter<-xpathSApply(chapterNode,"name",xmlValue)
+  desc<-xpathSApply(chapterNode,"desc",xmlValue)
+  chapters<<-rbind(chapters,data.frame(number=chapter,desc))
+  print(paste(chapter,desc,sep="|"))
+  sectionNodes<-getNodeSet(chapterNode,path = "section")
+  lapply(sectionNodes,function(x,name) parseSection(x,chapter))
+}
+
+parseSection<-function(sectionNode,chapter){
+  id<-xpathSApply(sectionNode,"@id")
+  desc<-xpathSApply(sectionNode,"desc",xmlValue)
+  sections<<-rbind(sections,data.frame(chapter,id,desc))
+  print(paste(".... ",paste(id,desc,sep="|")),sep="")
+  diagNodes<-getNodeSet(sectionNode,path = "diag")
+  lapply(diagNodes,function(x) parseDiag(x))
+  # sectionIndex<-xpathApply(chapterNode,"sectionIndex")
+}
+
+parseDiag<-function(diagNode){
+  code<-xpathSApply(diagNode,"name",xmlValue)
+  desc<-xpathSApply(diagNode,"desc",xmlValue)
+  diags<<-rbind(diags,data.frame(code,desc))
+  print(paste("........ ",paste(code,desc,sep="|")))
+  diagNodes<-getNodeSet(diagNode,path = "diag")
+  lapply(diagNodes,function(x) parseDiag(x))
+  # sectionIndex<-xpathApply(chapterNode,"sectionIndex")
+}
+
