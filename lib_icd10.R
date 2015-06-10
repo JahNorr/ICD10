@@ -142,7 +142,7 @@ download_raw_xml<-function(extract = TRUE, delete_zip=FALSE, ...) {
   return (TRUE)
 }
 
-get_xml<-function() {
+get_icd10<-function() {
   library(XML)
   fileUrl<-paste(rawdata_folder,"FY15_Tabular.xml",sep="")
   
@@ -175,7 +175,7 @@ get_xml<-function() {
 parseChapter<-function(chapterNode){
   chapter<-xpathSApply(chapterNode,"name",xmlValue)
   desc<-xpathSApply(chapterNode,"desc",xmlValue)
-  chapters<<-rbind(chapters,data.frame(number=chapter,desc))
+  icd10_chapters<<-rbind(icd10_chapters,data.frame(chapter,desc))
   print(paste(chapter,desc,sep="|"))
   sectionNodes<-getNodeSet(chapterNode,path = "section")
   lapply(sectionNodes,function(x,name) parseSection(x,chapter))
@@ -184,7 +184,7 @@ parseChapter<-function(chapterNode){
 parseSection<-function(sectionNode,chapter){
   id<-xpathSApply(sectionNode,"@id")
   desc<-xpathSApply(sectionNode,"desc",xmlValue)
-  sections<<-rbind(sections,data.frame(chapter,id,desc))
+  icd10_sections<<-rbind(icd10_sections,data.frame(chapter,id,desc))
   print(paste(".... ",paste(id,desc,sep="|")),sep="")
   diagNodes<-getNodeSet(sectionNode,path = "diag")
   lapply(diagNodes,function(x) parseDiag(x))
@@ -194,10 +194,9 @@ parseSection<-function(sectionNode,chapter){
 parseDiag<-function(diagNode){
   code<-xpathSApply(diagNode,"name",xmlValue)
   desc<-xpathSApply(diagNode,"desc",xmlValue)
-  diags<<-rbind(diags,data.frame(code,desc))
-  print(paste("........ ",paste(code,desc,sep="|")))
+  icd10_codes<<-rbind(icd10_codes,data.frame(code,desc))
+  #print(paste("........ ",paste(code,desc,sep="|")))
   diagNodes<-getNodeSet(diagNode,path = "diag")
   lapply(diagNodes,function(x) parseDiag(x))
   # sectionIndex<-xpathApply(chapterNode,"sectionIndex")
 }
-
