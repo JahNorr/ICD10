@@ -142,7 +142,7 @@ download_raw_xml<-function(extract = TRUE, delete_zip=FALSE, ...) {
   return (TRUE)
 }
 
-get_icd10<-function() {
+extract_icd10_xml<-function() {
   library(XML)
   fileUrl<-paste(rawdata_folder,"FY15_Tabular.xml",sep="")
   

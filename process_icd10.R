@@ -3,7 +3,7 @@ source("./lib_icd10.R")
 source("./lib_icd10_process.R")
 
 yn_download<-FALSE
-yn_extract<-FALSE
+yn_extract<-TRUE
 yn_process<-TRUE
 yn_save_processed<- TRUE
 
@@ -19,7 +19,7 @@ if (yn_extract) {
   icd10_codes<-data.frame(matrix(ncol=2,nrow=0),row.names = NULL,stringsAsFactors = F)
   colnames(icd10_codes)<-c("code","desc")
   
-  x<-get_icd10()
+  x<-extract_icd10_xml()
   save(list = c("icd10_codes","icd10_chapters","icd10_sections"),file="./data/icd10_raw.RData")
 }
 
