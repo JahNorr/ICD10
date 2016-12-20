@@ -1,0 +1,274 @@
+RangeID,RangeCodeStart,RangeCodeEnd,Level,ICD_Chapter,ICD_Description
+1,A00,A09,2,,Intestinal infectious diseases
+3,A15,A19,2,,Tuberculosis
+4,A20,A28,2,,Certain zoonotic bacterial diseases
+5,A30,A49,2,,Other bacterial diseases
+6,A50,A64,2,,Infections with a predominantly sexual mode of transmission
+7,A65,A69,2,,Other spirochetal diseases
+8,A70,A74,2,,Other diseases caused by chlamydiae
+9,A75,A79,2,,Rickettsioses
+10,A80,A89,2,,Viral infections of the central nervous system
+11,A90,A99,2,,Arthropod-borne viral fevers and viral hemorrhagic fevers
+12,B00,B09,2,,Viral infections characterized by skin and mucous membrane lesions
+13,B15,B19,2,,Viral hepatitis
+14,B20,B24,2,,Human immunodeficiency virus [HIV] disease
+15,B25,B34,2,,Other viral diseases 
+16,B35,B49,2,,Mycoses
+17,B50,B64,2,,Protozoal diseases
+18,B65,B83,2,,Helminthiases
+19,B85,B89,2,,"Pediculosis, acariasis and other infestations"
+20,B90,B94,2,,Sequelae of infectious and parasitic diseases
+22,C00,C97,2,,Malignant neoplasms
+23,C00,C14,3,,"Malignant neoplasms of lip, oral cavity and pharynx"
+24,C15,C26,3,,Malignant neoplasms of digestive organs
+25,C30,C39,3,,Malignant neoplasms of respiratory and intrathoracic organs
+26,D37,D48,2,,Neoplasms of uncertain or unknown behavior 
+27,C40,C41,3,,Malignant neoplasms of bone and articular cartilage
+28,C43,C44,3,,Melanoma and other malignant neoplasms of skin
+29,C45,C49,3,,Malignant neoplasms of mesothelial and soft tissue
+30,C51,C58,3,,Malignant neoplasms of female genital organs
+31,C60,C63,3,,Malignant neoplasms of male genital organs
+32,C64,C68,3,,Malignant neoplasms of urinary tract
+33,C69,C72,3,,"Malignant neoplasms of eye, brain and other parts of central nervous system"
+34,C73,C75,3,,Malignant neoplasms of thyroid and other endocrine glands
+35,C76,C80,3,,"Malignant neoplasms of ill-defined, secondary and unspecified sites"
+36,C81,C96,3,,"Malignant neoplasms of lyphoid, hematopoietic and related tissue"
+37,D00,D09,2,,In situ neoplasms
+38,D10,D36,2,,Benign neoplasms
+39,D50,D53,2,,Nutritional anemias
+41,D55,D59,2,,Hemolytic anemias
+42,D60,D64,2,,Aplastic and other anemias
+43,D65,D69,2,,"Coagulation defects, purpura and other hemorrhagic conditions"
+44,D70,D76,2,,Other diseases of blood and blood-forming organs
+45,D80,D89,2,,Certain disorders involving the immune mechanism
+46,E00,E07,2,,Disorders of thyroid gland
+48,E10,E14,2,,Diabetes mellitus
+49,E15,E16,2,,Other disorders of glucose regulation and pancreatic internal secretion
+50,E20,E34,2,,Disorders of other endocrine glands
+51,E40,E46,2,,Malnutrition
+52,E50,E64,2,,Other nutritional deficiencies
+53,E65,E68,2,,Obesity and other hyperalimentation
+54,E70,E89,2,,Metabolic disorders
+55,F01,F09,2,,"Organic, including symptomatic, mental disoders"
+57,F10,F19,2,,Mental and behavioral disorders due to psychoactive substance use
+58,F20,F29,2,,"Schizophrenia, schizotypal and delusional disorders"
+59,F30,F39,2,,Mood [affective] disorders
+60,F40,F48,2,,"Neurotic, stress-related and somatoform disorders"
+61,F50,F59,2,,Behavioral syndromes associated with physiological disturbances and physical factors 
+62,F60,F69,2,,Disorders of adult personality and behavior
+63,F70,F79,2,,Mental retardation
+64,F80,F89,2,,Disorders of psychological development
+65,F90,F98,2,,Behavioral and emotional disorders with onset usually occurring in childhood and adolescence
+67,G00,G09,2,,Inflammatory diseases of the central nervous system
+68,G10,G14,2,,Systemic atrophies primarily affecting the central nervous system
+69,G20,G25,2,,Extrapyramidal and movement disorders
+70,G30,G31,2,,Other degenerative diseases of the nervous system
+71,G35,G37,2,,Demyelinating diseases of the central nervous system
+72,G40,G47,2,,Episodic and paroxysmal disorders
+73,G50,G58,2,,"Nerve, nerve root and plexus disorders"
+74,G60,G64,2,,Polyneuropathies and other disorders of the peripheral nervous system
+75,G70,G72,2,,Diseases of myoneural junction and muscle
+76,G80,G83,2,,Cerebral palsy and other paralytic syndromes
+77,G90,G98,2,,Other disorders of the nervous system
+78,H00,H05,2,,"Disorders of eyelid, lacrimal system and orbit"
+80,H10,H11,2,,Disorders of conjunctiva
+81,H15,H21,2,,"Disorders of sclera, cornea, iris and ciliary body"
+82,H25,H27,2,,Disorders of lens
+83,H30,H35,2,,Disorders of choroid and retina
+84,H43,H44,2,,Disorders of vitreous body and globe
+85,H46,H47,2,,Disorders of optic nerve and visual pathways
+86,H49,H52,2,,"Disorders of ocular muscles, binocular movement, accommodation and refraction"
+87,H53,H54,2,,Visual distrubances and blindness
+88,H55,H59,2,,Other disorders of eye and adnexa
+90,H60,H61,2,,Diseases of external ear
+91,H65,H74,2,,Diseases of middle ear and mastoid
+92,H80,H83,2,,Diseases of inner ear
+93,H90,H95,2,,Other disorders of ear 
+94,I00,I02,2,,Acute rheumatic fever
+96,I05,I09,2,,Chronic rheumatic heart diseases
+97,I10,I15,2,,Hypertensive diseases
+98,I20,I25,2,,Ischemic heart diseases
+99,I26,I28,2,,Pulmonary heart disease and diseases of pulmonary circulation
+100,I30,I51,2,,Other forms of heart disease
+101,I60,I69,2,,Cerebrovascular diseases
+102,I70,I78,2,,"Diseases of arteries, arterioles and capillaries"
+103,I80,I89,2,,"Diseases of veins, lymphatic vessels and lymph nodes, not elsewhere classified"
+104,I95,I99,2,,Other and unspecified disorders of the circulatory system
+105,J00,J06,2,,Acute upper respiratory infections 
+107,J09,J18,2,,Influenza and pneumonia
+108,J20,J22,2,,Other acute lower respiratory infections
+109,J30,J39,2,,Other diseases of upper respiratory tract
+110,J40,J47,2,,Chronic lower respiratory diseases
+111,J60,J70,2,,Lung diseases due to external agents
+112,J80,J84,2,,Other respiratory diseases principally affecting the interstitium
+113,J85,J86,2,,Suppurative and necrotic conditions of lower respiratory tract
+114,J90,J94,2,,Other diseases of pleura
+115,J95,J98,2,,Other diseases of the respiratory system
+117,K00,K14,2,,"Diseases of oral cavity, salivary glands and jaws"
+118,K20,K31,2,,"Diseases of esophagus, stomach and duodenum"
+119,K35,K38,2,,Diseases of appendix
+120,K40,K46,2,,Hernia
+121,K50,K52,2,,Noninfective enteritis and colitis
+122,K55,K63,2,,Other diseases of intestines
+123,K65,K66,2,,Diseases of peritoneum
+124,K70,K76,2,,Diseases of liver
+125,K80,K86,2,,"Diorders of gallbladder, biliary tract and pancreas"
+126,K90,K92,2,,Other diseases of the digestive system
+128,L00,L08,2,,Infections of the skin and subcutaneous tissue
+129,L10,L13,2,,Bullous disorders
+130,L20,L30,2,,Dermatitis and eczema
+131,L40,L44,2,,Papulosquamous disorders
+132,L50,L53,2,,Urticaria and erythema
+133,L55,L59,2,,Radiation-related disorders of the skin and subcutaneous tissue
+134,L60,L75,2,,Disorders of skin appendages
+135,L80,L98,2,,Other disorders of the skin and subcutaneous tissue
+136,M00,M02,3,,Infectious arthropathies
+137,M00,M25,2,,Arthropathies
+139,M05,M13,3,,Inflammatory polyarthropathies
+140,M15,M19,3,,Arthrosis
+141,M20,M25,3,,Other joint disorders 
+142,M30,M35,2,,Systemic connective tissue disorders
+143,M40,M54,2,,Dorsopathies
+144,M40,M43,3,,Deforming dorsopathies
+145,M45,M48,3,,Spondylopathies
+146,M50,M54,3,,Other dorsopathies 
+147,M60,M79,2,,Soft tissue disorders 
+148,M60,M62,3,,Disorders of muscles
+149,M65,M67,3,,Disorders of synovium and tendon
+150,M70,M79,3,,Other soft tissue disorders
+151,M80,M85,3,,Disorders of bone density and structure
+152,M80,M94,2,,Osteopathies and chondropathies
+153,M86,M89,3,,Other osteopathies
+154,M91,M94,3,,Chondropathies
+155,M95,M99,2,,Other disorders of the musculoskeletal system and connective tissue
+157,N00,N07,2,,Glomerular diseases
+158,N10,N15,2,,Renal tubulo-interstitial diseases
+159,N17,N19,2,,Renal failure
+160,N20,N23,2,,Urolithiasis
+161,N25,N28,2,,Other disorders of kidney and ureter
+162,N30,N39,2,,Other diseases of urinary system
+163,N40,N50,2,,Diseases of male genital organs
+164,N60,N64,2,,Disorders of breast
+165,N70,N76,2,,Inflammatory diseases of female pelvic organs
+166,N80,N98,2,,Noninflammatory disorders of female genital tract
+168,O00,O08,2,,Pregnancy with abortive outcome
+169,O10,O16,2,,"Edema, proteinuria and hypertensive disorders in pregnancy, childbirth and the puerperium"
+170,O20,O29,2,,Other maternal disorders predominantly related to pregnancy
+171,O30,O48,2,,Maternal care related to the fetus and amniotic cavity and possible delivery problems
+172,O60,O75,2,,Complications of labor and delivery
+173,O85,O92,2,,Complications predominantly related to the puerperium
+174,O95,O99,2,,"Other obstetric conditions, not elsewhere classified"
+175,P00,P04,2,,"Newborn affected by maternal factors and by complications of pregnancy, labor and delivery"
+177,P05,P08,2,,Disorders related to length of gestation and fetal growth
+178,P10,P15,2,,Birth trauma
+179,P20,P29,2,,Respiratory and cardiovascular disorders specific to the perinatal period
+180,P35,P39,2,,Infections specific to the perinatal period
+181,P50,P61,2,,Hemorrhagic and hematological disorders of fetus and newborn
+182,P70,P74,2,,Transitory endocrine and metabolic disorders specific to newborn
+183,P76,P78,2,,Digestive system disorders of newborn
+184,P80,P83,2,,Conditions involving the integument and temperature regulation of newborn
+185,P90,P96,2,,Other disorders originating in the perinatal period
+186,Q00,Q07,2,,Congenital malformations of the nervous system
+188,Q10,Q18,2,,"Congenital malformations of eye, ear, face and neck"
+189,Q20,Q28,2,,Congenital malformations of the circulatory system
+190,Q30,Q34,2,,Congenital malformations of the respiratory system
+191,Q35,Q37,2,,Cleft lip and cleft palate
+192,Q38,Q45,2,,Other congenital malformations of the digestive system
+193,Q50,Q56,2,,Congenital malformations of genital organs
+194,Q60,Q64,2,,Congenital malformations of the urinary system
+195,Q65,Q79,2,,Congenital malformations and deformations of the musculoskeletal system
+196,Q80,Q89,2,,Other congenital malformations
+197,Q90,Q99,2,,"Chromosomal abnormalities, not elsewhere classified"
+198,R00,R09,2,,Symptoms and signs involving the circulatory and respiratory systems
+200,R10,R19,2,,Symptoms and signs involving the digestive system and abdomen
+201,R20,R23,2,,Symptoms and signs involving the skin and subcutaneous tissue
+202,R25,R29,2,,Symptoms and signs involving the nervous and musculoskeletal systems
+203,R30,R39,2,,Symptoms and signs involving the urinary system
+204,R40,R46,2,,"Symptoms and signs involving cognition, perception, emotional state and behavior"
+205,R47,R49,2,,Symptoms and signs involving speech and voice
+206,R50,R68,2,,General symptoms and signs
+207,R70,R79,2,,"Abnormal findings on examination of blood, without diagnosis"
+208,R80,R82,2,,"Abnormal findings on examination of urine, without diagnosis"
+209,R83,R89,2,,"Abnormal findings on examination of other body fluids, substances and tissues, without diagnosis"
+210,R90,R94,2,,"Abnormal findings on diagnostic imaging and in function studies, without diagnosis"
+211,R95,R99,2,,Ill-defined and unknown causes of mortality
+213,S00,S09,2,,Injuries to the head
+214,S10,S19,2,,Injuries to the neck
+215,S20,S29,2,,Injuries to the thorax
+216,S30,S39,2,,"Injuries to the abdomen, lower back, lumbar spine and pelvis"
+217,S40,S49,2,,Injuries to the shoulder and upper arm
+218,S50,S59,2,,Injuries to the elbow and forearm
+219,S60,S69,2,,Injuries to the wrist and hand
+220,S70,S79,2,,Injuries to the hip and thigh
+221,S80,S89,2,,Injuries to the knee and lower leg
+222,S90,S99,2,,Injuries to the ankle and foot
+223,T00,T07,2,,Injuries involving multiple body regions
+224,T08,T14,2,,"Injuries to unspecified part of trunk, limb or body region"
+225,T15,T19,2,,Effects of foreign body entering through natural orifice
+226,T20,T25,3,,"Burns and corrosions of external body surface, specified by site"
+227,T20,T32,2,,Burns and corrosions
+228,T26,T28,3,,Burns and corrosions confined to eye and internal organs
+229,T30,T32,3,,Burns and corrosions of multiple and unspecified body regions
+230,T33,T35,2,,Frostbite
+231,T36,T50,2,,"Poisoning by drugs, medicaments and biological substances"
+232,T51,T65,2,,Toxic effects of substances chiefly nonmedicinal as to source
+233,T66,T78,2,,Other and unspecified effects of external causes
+234,T80,T88,2,,"Complications of surgical and medical care, not elsewhere classified"
+235,T90,T98,2,,"Sequelae of injuries, of poisoning and of other consequences of external causes"
+236,V01,V09,2,,Pedestrian injured in transport accident
+238,V10,V19,2,,Pedal cyclist injured in transport accident
+239,V20,V29,2,,Motorcycle rider injured in transport accident
+240,V30,V39,2,,Occupant of three-wheeled motor vehicle injured in transport accident
+241,V40,V49,2,,Car occupant injured in transport accident
+242,V50,V59,2,,Occupant of pick-up truck or van injured in transport accident
+243,V60,V69,2,,Occupant of heavy transport vehicle injured in transport accident
+244,V70,V79,2,,Bus occupant injured in transport accident
+245,V80,V89,2,,Other land transport accidents
+246,V90,V94,2,,Water transport accidents
+247,V95,V97,2,,Air and space transport accidents
+248,V98,V99,2,,Other and unspecified transport accidents
+249,W00,W19,3,,Falls
+250,W00,X59,2,,Other external causes of accidental injury
+251,W20,W49,3,,Exposure to inanimate mechanical forces
+252,W50,W64,3,,Exposure to animate mechanical forces
+253,W65,W74,3,,Accidental drowning and submersion
+254,W75,W84,3,,Other accidental threats to breathing
+255,W85,W99,3,,"Exposure to electric current, radiation and extreme ambient air temperature and pressure"
+256,X00,X09,3,,"Exposure to smoke, fire and flames"
+257,X10,X19,3,,Contact with heat and hot substances
+258,X20,X29,3,,Contact with venomous animals and plants
+259,X30,X39,3,,Exposure to forces of nature
+260,X40,X49,3,,Accidental poisoning by and exposure to noxious substances
+261,X50,X57,3,,"Overexertion, travel and privation"
+262,X58,X59,3,,Accidental exposure to other and unspecified factors
+263,X60,X84,2,,Intentional self-harm
+264,X85,Y09,2,,Assault (homicide)
+265,Y10,Y34,2,,Event of undetermined intent
+266,Y35,Y36,2,,Legal intervention and operations of war
+267,Y40,Y84,2,,Complications of medical and surgical care
+268,Y40,Y59,3,,"Drugs, medicaments and biological substances causing adverse effects in therapeutic use"
+269,Y60,Y69,3,,Misadventures to patients during surgical and medical care
+270,Y70,Y82,3,,Medical devices associated with adverse incidents in diagnostic and therapeutic use
+271,Y83,Y84,3,,"Surgical and other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+272,Y85,Y89,2,,Sequelae of external causes of mortality
+273,A00,B99,1,1,Certain infectious and parasitic diseases
+274,C00,D48,1,2,Neoplasms
+275,D50,D89,1,3,Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
+276,E00,E90,1,4,"Endocrine, nutritional and metabolic diseases"
+277,F01,F99,1,5,Mental and behavioral disorders
+278,G00,G98,1,6,Diseases of the nervous system
+279,H00,H59,1,7,Diseases of the eye and adnexa
+293,Z00,Z99,1,21,Factors influencing health status and contact with health services
+280,H60,H95,1,8,Diseases of the ear and mastoid process
+281,I00,I99,1,9,Diseases of the circulatory system
+282,J00,J98,1,10,Diseases of the respiratory system
+283,K00,K92,1,11,Diseases of the digestive system
+284,L00,L98,1,12,Diseases of the skin and subcutaneous tissue
+285,M00,M99,1,13,Diseases of the musculoskeletal system and connective tissue
+286,N00,N99,1,14,Diseases of the genitourinary system
+287,O00,O99,1,15,"Pregnancy, childbirth and the puerperium"
+288,P00,P96,1,16,Certain conditions originating in the perinatal period
+289,Q00,Q99,1,17,"Congenital malformations, deformations and chromosomal abnormalities"
+290,R00,R99,1,18,"Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified"
+291,S00,T98,1,19,"Injury, poisoning and certain other consequences of external causes"
+292,V00,Y89,1,20,External causes of mortality/morbidity
